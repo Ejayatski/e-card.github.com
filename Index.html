@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-Card</title>
+</head>
+<body>
+
+<div class="ecard" onclick="showMessage()">
+    <div class="ecard-content">
+        <div class="greeting">Happy Holidays!</div>
+        <div class="hi-message">Ma'am Roan👋 </div>
+        <div class="sign">View Message</div>
+    </div>
+    <div class="message">🎉 Thank you po for everything and Advance Happy New Year po! 🎉</div>
+</div>
+
+<script>
+    function showMessage() {
+        const ecardContent = document.querySelector('.ecard-content');
+        const message = document.querySelector('.message');
+
+        ecardContent.style.display = 'none';
+        message.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

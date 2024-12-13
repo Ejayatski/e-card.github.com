@@ -1,0 +1,89 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #001f3f, #000000); /* Dark blue to black gradient */
+            overflow: hidden;
+        }
+
+        .ecard {
+            width: 350px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 183, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .ecard:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 25px rgba(0, 183, 255, 0.7), 0 0 30px rgba(0, 183, 255, 0.7);
+        }
+
+        .ecard::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: linear-gradient(120deg, rgba(0, 183, 255, 0.2), transparent);
+            transform: rotate(45deg);
+            animation: flow 5s infinite linear;
+        }
+
+        @keyframes flow {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            100% {
+                transform: translate(50%, 50%) rotate(45deg);
+            }
+        }
+
+        .message {
+            display: none;
+            font-size: 1.2em;
+            color: #00b7ff; /* Neon blue for message */
+            text-shadow: 0 0 10px #00b7ff, 0 0 20px #00b7ff;
+        }
+
+        .ecard-content {
+            font-size: 1.2em;
+            color: #00b7ff; /* Neon blue text */
+            text-shadow: 0 0 10px #00b7ff, 0 0 20px #00b7ff;
+            z-index: 1;
+        }
+
+        .greeting {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #00b7ff;
+            text-shadow: 0 0 15px #00b7ff, 0 0 30px #00b7ff;
+            margin-bottom: 10px;
+        }
+
+        .hi-message {
+            font-size: 1.2em;
+            color: #00b7ff;
+            margin-bottom: 20px;
+        }
+
+        .sign {
+            font-size: 1em;
+            color: #00b7ff;
+            text-decoration: underline;
+            text-shadow: 0 0 5px #00b7ff, 0 0 10px #00b7ff;
+        }
